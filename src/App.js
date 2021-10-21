@@ -7,34 +7,37 @@ import Login from './Pages/Login/Login/Login';
 import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import DocumentTitle from 'react-document-title';
 
 
 function App() {
   return (
-    <div className="App">
-      <AuthProvider>
-        <Router>
-          <Header></Header>
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <PrivateRoute path="/booking/:serviceId">
-              <Booking></Booking>
-            </PrivateRoute>
-            <Route path="*">
-              <NotFound></NotFound>
-            </Route>
-          </Switch>
-        </Router>
-      </AuthProvider>
-    </div>
+    <DocumentTitle title='Genius Car Mechanics'>
+      <div className="App">
+        <AuthProvider>
+          <Router>
+            <Header></Header>
+            <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route path="/home">
+                <Home></Home>
+              </Route>
+              <Route path="/login">
+                <Login></Login>
+              </Route>
+              <PrivateRoute path="/booking/:serviceId">
+                <Booking></Booking>
+              </PrivateRoute>
+              <Route path="*">
+                <NotFound></NotFound>
+              </Route>
+            </Switch>
+          </Router>
+        </AuthProvider>
+      </div>
+    </DocumentTitle>
   );
 }
 
