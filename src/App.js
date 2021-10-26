@@ -10,6 +10,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import DocumentTitle from 'react-document-title';
 import AddService from './Pages/AddService/AddService';
 import ManageServices from './Pages/ManageServices/ManageServices';
+import UpdateService from './Pages/updateService/UpdateService';
 
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
               </PrivateRoute>
               <Route path="/addService">
                 <AddService></AddService>
+              </Route>
+              <Route path="/manageServices/:id">
+                <UpdateService></UpdateService>
               </Route>
               <Route path="/manageServices">
                 <ManageServices></ManageServices>

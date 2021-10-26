@@ -1,0 +1,17 @@
+.delete-btn,.update-btn{
+    transition: transform 1s;
+}
+
+.delete-btn:hover, .update-btn:hover{
+    transform: scale(1.5,1.5);   
+}
+
+.update-service form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-service form input, textarea{
+    width: 40%;
+}
