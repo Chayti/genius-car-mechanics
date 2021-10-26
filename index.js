@@ -47,7 +47,7 @@ async function run() {
         app.delete('/services/:serviceId', async (req, res) => {
             const id = req.params.serviceId
             const query = { _id: ObjectId(id) }
-            const result = servicesCollection.deleteOne(query)
+            const result = await servicesCollection.deleteOne(query)
             res.send(result)
         })
 
