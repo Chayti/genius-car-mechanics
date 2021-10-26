@@ -9,6 +9,7 @@ import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import DocumentTitle from 'react-document-title';
 import AddService from './Pages/AddService/AddService';
+import ManageServices from './Pages/ManageServices/ManageServices';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
               </PrivateRoute>
               <Route path="/addService">
                 <AddService></AddService>
+              </Route>
+              <Route path="/manageServices">
+                <ManageServices></ManageServices>
               </Route>
               <Route path="*">
                 <NotFound></NotFound>
