@@ -29,7 +29,7 @@ const AddService = () => {
 
                 <input className="m-3 p-2" placeholder="Image URL" {...register("img")} />
 
-                <input type="submit" />
+                <button className="btn border-2 border-success bg-info rounded-pill">Add Service</button>
             </form>
         </div>
     );
